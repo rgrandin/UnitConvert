@@ -1,4 +1,3 @@
-UnitConvert
-===========
+# UnitConvert
 
-Tool for performing unit conversions.
+A unit-conversion tool.

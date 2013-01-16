@@ -1,0 +1,1531 @@
+<?xml version="1.0"?>
+<interface>
+  <requires lib="gtk+" version="2.20"/>
+  <!-- interface-naming-policy project-wide -->
+  <object class="GtkWindow" id="window_main">
+    <property name="title" translatable="yes">Unit Conversion</property>
+    <child>
+      <object class="GtkVBox" id="vbox1">
+        <property name="visible">True</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkMenuBar" id="menubar1">
+            <property name="visible">True</property>
+            <child>
+              <object class="GtkMenuItem" id="menuitem1">
+                <property name="visible">True</property>
+                <property name="use_action_appearance">False</property>
+                <property name="label" translatable="yes">_File</property>
+                <property name="use_underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu" id="menu1">
+                    <property name="visible">True</property>
+                    <child>
+                      <object class="GtkImageMenuItem" id="imagemenuitem1">
+                        <property name="label">gtk-new</property>
+                        <property name="use_action_appearance">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="imagemenuitem2">
+                        <property name="label">gtk-open</property>
+                        <property name="use_action_appearance">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="imagemenuitem3">
+                        <property name="label">gtk-save</property>
+                        <property name="use_action_appearance">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="imagemenuitem4">
+                        <property name="label">gtk-save-as</property>
+                        <property name="use_action_appearance">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem" id="separatormenuitem1">
+                        <property name="visible">True</property>
+                        <property name="use_action_appearance">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="mnu_quit">
+                        <property name="label">gtk-quit</property>
+                        <property name="visible">True</property>
+                        <property name="use_action_appearance">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkMenuItem" id="menuitem2">
+                <property name="use_action_appearance">False</property>
+                <property name="label" translatable="yes">_Edit</property>
+                <property name="use_underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu" id="menu2">
+                    <property name="visible">True</property>
+                    <child>
+                      <object class="GtkImageMenuItem" id="imagemenuitem6">
+                        <property name="label">gtk-cut</property>
+                        <property name="visible">True</property>
+                        <property name="use_action_appearance">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="imagemenuitem7">
+                        <property name="label">gtk-copy</property>
+                        <property name="visible">True</property>
+                        <property name="use_action_appearance">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="imagemenuitem8">
+                        <property name="label">gtk-paste</property>
+                        <property name="visible">True</property>
+                        <property name="use_action_appearance">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="imagemenuitem9">
+                        <property name="label">gtk-delete</property>
+                        <property name="visible">True</property>
+                        <property name="use_action_appearance">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkMenuItem" id="menuitem3">
+                <property name="use_action_appearance">False</property>
+                <property name="label" translatable="yes">_View</property>
+                <property name="use_underline">True</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkMenuItem" id="menuitem4">
+                <property name="visible">True</property>
+                <property name="use_action_appearance">False</property>
+                <property name="label" translatable="yes">_Help</property>
+                <property name="use_underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu" id="menu3">
+                    <property name="visible">True</property>
+                    <child>
+                      <object class="GtkImageMenuItem" id="mnu_help_about">
+                        <property name="label">gtk-about</property>
+                        <property name="visible">True</property>
+                        <property name="use_action_appearance">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="mnu_help_reference">
+                        <property name="label">gtk-help</property>
+                        <property name="visible">True</property>
+                        <property name="use_action_appearance">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkNotebook" id="notebook1">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <child>
+              <object class="GtkTable" id="table1">
+                <property name="visible">True</property>
+                <property name="n_rows">8</property>
+                <property name="n_columns">3</property>
+                <child>
+                  <object class="GtkLabel" id="label3">
+                    <property name="visible">True</property>
+                    <property name="label" translatable="yes">Input</property>
+                    <attributes>
+                      <attribute name="weight" value="bold"/>
+                      <attribute name="foreground" value="#000000000000"/>
+                      <attribute name="scale" value="3.000000"/>
+                    </attributes>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label4">
+                    <property name="height_request">20</property>
+                    <property name="visible">True</property>
+                    <property name="label" translatable="yes">Output</property>
+                    <attributes>
+                      <attribute name="weight" value="bold"/>
+                      <attribute name="scale" value="3.000000"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="left_attach">2</property>
+                    <property name="right_attach">3</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkVSeparator" id="vseparator1">
+                    <property name="visible">True</property>
+                    <property name="orientation">vertical</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="right_attach">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkVSeparator" id="vseparator2">
+                    <property name="visible">True</property>
+                    <property name="orientation">vertical</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="right_attach">2</property>
+                    <property name="top_attach">1</property>
+                    <property name="bottom_attach">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkVSeparator" id="vseparator3">
+                    <property name="width_request">10</property>
+                    <property name="visible">True</property>
+                    <property name="orientation">vertical</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="right_attach">2</property>
+                    <property name="top_attach">4</property>
+                    <property name="bottom_attach">5</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="lbl_menu_output">
+                    <property name="visible">True</property>
+                    <property name="tooltip_text" translatable="yes">Converted value</property>
+                    <property name="label" translatable="yes">0.0</property>
+                    <attributes>
+                      <attribute name="foreground" value="#ffff000007a3"/>
+                      <attribute name="scale" value="2.000000"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="left_attach">2</property>
+                    <property name="right_attach">3</property>
+                    <property name="top_attach">1</property>
+                    <property name="bottom_attach">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkVBox" id="vbox2">
+                    <property name="visible">True</property>
+                    <property name="orientation">vertical</property>
+                    <child>
+                      <object class="GtkHBox" id="hbox13">
+                        <property name="visible">True</property>
+                        <child>
+                          <object class="GtkLabel" id="label17">
+                            <property name="visible">True</property>
+                            <property name="label" translatable="yes">Unit String:</property>
+                          </object>
+                          <packing>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="lbl_menu_input_units">
+                            <property name="width_request">200</property>
+                            <property name="height_request">30</property>
+                            <property name="visible">True</property>
+                            <property name="label" translatable="yes">[-]</property>
+                          </object>
+                          <packing>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkHBox" id="hbox1">
+                        <property name="visible">True</property>
+                        <child>
+                          <object class="GtkFixed" id="fixed1">
+                            <property name="visible">True</property>
+                          </object>
+                          <packing>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="btn_menu_input_add">
+                            <property name="label">gtk-add</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="receives_default">True</property>
+                            <property name="tooltip_text" translatable="yes">Add unit specified by input drop-down boxes to input Unit String</property>
+                            <property name="use_action_appearance">False</property>
+                            <property name="use_stock">True</property>
+                          </object>
+                          <packing>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkFixed" id="fixed2">
+                            <property name="visible">True</property>
+                          </object>
+                          <packing>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="btn_menu_input_clear">
+                            <property name="label">gtk-clear</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="receives_default">True</property>
+                            <property name="tooltip_text" translatable="yes">Clear output Unit String</property>
+                            <property name="use_action_appearance">False</property>
+                            <property name="use_stock">True</property>
+                          </object>
+                          <packing>
+                            <property name="position">3</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkFixed" id="fixed20">
+                            <property name="visible">True</property>
+                          </object>
+                          <packing>
+                            <property name="position">4</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="top_attach">4</property>
+                    <property name="bottom_attach">5</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkVSeparator" id="vseparator4">
+                    <property name="visible">True</property>
+                    <property name="orientation">vertical</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="right_attach">2</property>
+                    <property name="top_attach">3</property>
+                    <property name="bottom_attach">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkHBox" id="hbox2">
+                    <property name="visible">True</property>
+                    <child>
+                      <object class="GtkVBox" id="vbox11">
+                        <property name="visible">True</property>
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <object class="GtkLabel" id="label11">
+                            <property name="visible">True</property>
+                            <property name="label" translatable="yes">SI Prefix</property>
+                          </object>
+                          <packing>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkComboBox" id="cbo_menu_input_si">
+                            <property name="visible">True</property>
+                            <property name="tooltip_text" translatable="yes">SI prefix associted with input unit</property>
+                            <property name="active">10</property>
+                            <child>
+                              <object class="GtkCellRendererText" id="cellrenderertext1"/>
+                              <attributes>
+                                <attribute name="text">0</attribute>
+                              </attributes>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkVBox" id="vbox10">
+                        <property name="visible">True</property>
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <object class="GtkLabel" id="label12">
+                            <property name="visible">True</property>
+                            <property name="label" translatable="yes">Unit</property>
+                          </object>
+                          <packing>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkComboBox" id="cbo_menu_input_unit">
+                            <property name="visible">True</property>
+                            <property name="tooltip_text" translatable="yes">Input unit</property>
+                            <child>
+                              <object class="GtkCellRendererText" id="cellrenderertext3"/>
+                              <attributes>
+                                <attribute name="text">0</attribute>
+                              </attributes>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkVBox" id="vbox9">
+                        <property name="visible">True</property>
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <object class="GtkLabel" id="label13">
+                            <property name="visible">True</property>
+                            <property name="label" translatable="yes">Power</property>
+                          </object>
+                          <packing>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="txt_menu_input_power">
+                            <property name="width_request">50</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Power associated with input unit</property>
+                            <property name="invisible_char">&#x25CF;</property>
+                            <property name="text" translatable="yes">1</property>
+                            <property name="invisible_char_set">True</property>
+                          </object>
+                          <packing>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="position">2</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="top_attach">3</property>
+                    <property name="bottom_attach">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkHBox" id="hbox3">
+                    <property name="visible">True</property>
+                    <child>
+                      <object class="GtkLabel" id="label5">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">Value</property>
+                        <attributes>
+                          <attribute name="scale" value="2.000000"/>
+                        </attributes>
+                      </object>
+                      <packing>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkEntry" id="txt_menu_input">
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="tooltip_text" translatable="yes">Input value to be converted.</property>
+                        <property name="invisible_char">&#x25CF;</property>
+                        <property name="text" translatable="yes">1.0</property>
+                      </object>
+                      <packing>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="top_attach">1</property>
+                    <property name="bottom_attach">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkVBox" id="vbox3">
+                    <property name="visible">True</property>
+                    <property name="orientation">vertical</property>
+                    <child>
+                      <object class="GtkHBox" id="hbox14">
+                        <property name="visible">True</property>
+                        <child>
+                          <object class="GtkLabel" id="label18">
+                            <property name="visible">True</property>
+                            <property name="label" translatable="yes">Unit String:</property>
+                          </object>
+                          <packing>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="lbl_menu_output_units">
+                            <property name="width_request">200</property>
+                            <property name="height_request">30</property>
+                            <property name="visible">True</property>
+                            <property name="label" translatable="yes">[-]</property>
+                          </object>
+                          <packing>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkHBox" id="hbox4">
+                        <property name="visible">True</property>
+                        <child>
+                          <object class="GtkFixed" id="fixed6">
+                            <property name="visible">True</property>
+                          </object>
+                          <packing>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="btn_menu_output_add">
+                            <property name="label">gtk-add</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="receives_default">True</property>
+                            <property name="tooltip_text" translatable="yes">Add unit specified by output drop-down boxes to ouput Unit String</property>
+                            <property name="use_action_appearance">False</property>
+                            <property name="use_stock">True</property>
+                          </object>
+                          <packing>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkFixed" id="fixed7">
+                            <property name="visible">True</property>
+                          </object>
+                          <packing>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="btn_menu_output_clear">
+                            <property name="label">gtk-clear</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="receives_default">True</property>
+                            <property name="tooltip_text" translatable="yes">Clear output Unit String</property>
+                            <property name="use_action_appearance">False</property>
+                            <property name="use_stock">True</property>
+                          </object>
+                          <packing>
+                            <property name="position">3</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkFixed" id="fixed21">
+                            <property name="visible">True</property>
+                          </object>
+                          <packing>
+                            <property name="position">4</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="left_attach">2</property>
+                    <property name="right_attach">3</property>
+                    <property name="top_attach">4</property>
+                    <property name="bottom_attach">5</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkHBox" id="hbox5">
+                    <property name="visible">True</property>
+                    <child>
+                      <object class="GtkVBox" id="vbox8">
+                        <property name="visible">True</property>
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <object class="GtkLabel" id="label14">
+                            <property name="visible">True</property>
+                            <property name="label" translatable="yes">SI Prefix</property>
+                          </object>
+                          <packing>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkComboBox" id="cbo_menu_output_si">
+                            <property name="visible">True</property>
+                            <property name="tooltip_text" translatable="yes">SI prefix associated with output unit</property>
+                            <property name="active">10</property>
+                            <child>
+                              <object class="GtkCellRendererText" id="cellrenderertext2"/>
+                              <attributes>
+                                <attribute name="text">0</attribute>
+                              </attributes>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkVBox" id="vbox6">
+                        <property name="visible">True</property>
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <object class="GtkLabel" id="label15">
+                            <property name="visible">True</property>
+                            <property name="label" translatable="yes">Unit</property>
+                          </object>
+                          <packing>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkComboBox" id="cbo_menu_output_unit">
+                            <property name="visible">True</property>
+                            <property name="tooltip_text" translatable="yes">Output unit</property>
+                            <child>
+                              <object class="GtkCellRendererText" id="cellrenderertext4"/>
+                              <attributes>
+                                <attribute name="text">0</attribute>
+                              </attributes>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkVBox" id="vbox7">
+                        <property name="visible">True</property>
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <object class="GtkLabel" id="label16">
+                            <property name="visible">True</property>
+                            <property name="label" translatable="yes">Power</property>
+                          </object>
+                          <packing>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="txt_menu_output_power">
+                            <property name="width_request">50</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Power associated with output unit</property>
+                            <property name="invisible_char">&#x25CF;</property>
+                            <property name="text" translatable="yes">1</property>
+                            <property name="invisible_char_set">True</property>
+                          </object>
+                          <packing>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="position">2</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="left_attach">2</property>
+                    <property name="right_attach">3</property>
+                    <property name="top_attach">3</property>
+                    <property name="bottom_attach">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkFixed" id="fixed8">
+                    <property name="height_request">40</property>
+                    <property name="visible">True</property>
+                  </object>
+                  <packing>
+                    <property name="top_attach">5</property>
+                    <property name="bottom_attach">6</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkFixed" id="fixed9">
+                    <property name="visible">True</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="right_attach">2</property>
+                    <property name="top_attach">5</property>
+                    <property name="bottom_attach">6</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkFixed" id="fixed10">
+                    <property name="visible">True</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">2</property>
+                    <property name="right_attach">3</property>
+                    <property name="top_attach">5</property>
+                    <property name="bottom_attach">6</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkVSeparator" id="vseparator9">
+                    <property name="height_request">20</property>
+                    <property name="visible">True</property>
+                    <property name="orientation">vertical</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="right_attach">2</property>
+                    <property name="top_attach">2</property>
+                    <property name="bottom_attach">3</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkFixed" id="fixed49">
+                    <property name="visible">True</property>
+                  </object>
+                  <packing>
+                    <property name="top_attach">2</property>
+                    <property name="bottom_attach">3</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkFixed" id="fixed50">
+                    <property name="visible">True</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">2</property>
+                    <property name="right_attach">3</property>
+                    <property name="top_attach">2</property>
+                    <property name="bottom_attach">3</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkFixed" id="fixed51">
+                    <property name="visible">True</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="right_attach">2</property>
+                    <property name="top_attach">7</property>
+                    <property name="bottom_attach">8</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label19">
+                    <property name="visible">True</property>
+                    <property name="label" translatable="yes">Instructions:\n
+\n
+1. Enter input value to be converted in the above\n
+    entry box labeled "Value".\n
+2. Specify the units associated with the input value:\n
+      - Select the SI Prefix and Unit from the drop-down\n
+        boxes.\n
+      - Enter the power as an integer or decimal\n
+        (e.g., "0.5" is square-root), using negative powers\n
+        to identify a quantity as being in the denominator.\n
+3. Click "Add" to add the unit to the Unit String.\n
+4. Repeat steps 2 and 3 as-necessary to include all\n
+    input units.\n
+5. Repeat steps 2, 3, and 4 with the Output units.\n
+6. Click "Convert" to perform the conversion.  The result\n
+    will be placed directly below the bolded word "Output".\n</property>
+                  </object>
+                  <packing>
+                    <property name="top_attach">7</property>
+                    <property name="bottom_attach">8</property>
+                    <property name="x_padding">5</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkFixed" id="fixed53">
+                    <property name="visible">True</property>
+                  </object>
+                  <packing>
+                    <property name="top_attach">6</property>
+                    <property name="bottom_attach">7</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label20">
+                    <property name="visible">True</property>
+                    <property name="label" translatable="yes">Clicking "Clear" for either Input or Output units will clear the\n
+Unit String for the respective quantities.  All units in the\n
+respective Unit String will be cleared.\n
+\n
+Clicking "Clear All" will reset all fields on both tabs.\n
+\n
+Use the "Manual Input" tab to specify the Unit Strings yourself\n
+without the aid of the drop-down boxes.  Information regarding\n
+allowable strings for manual input can be found in the Help\n
+menu item (Help -&gt; Help).\n</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">2</property>
+                    <property name="right_attach">3</property>
+                    <property name="top_attach">7</property>
+                    <property name="bottom_attach">8</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkHBox" id="hbox6">
+                    <property name="visible">True</property>
+                    <child>
+                      <object class="GtkButton" id="btn_menu_clear">
+                        <property name="label">Clear All</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="use_action_appearance">False</property>
+                      </object>
+                      <packing>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkFixed" id="fixed4">
+                        <property name="width_request">10</property>
+                        <property name="visible">True</property>
+                      </object>
+                      <packing>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="btn_menu_convert">
+                        <property name="label">Convert</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="use_action_appearance">False</property>
+                      </object>
+                      <packing>
+                        <property name="position">2</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="right_attach">2</property>
+                    <property name="top_attach">6</property>
+                    <property name="bottom_attach">7</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkFixed" id="fixed3">
+                    <property name="visible">True</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">2</property>
+                    <property name="right_attach">3</property>
+                    <property name="top_attach">6</property>
+                    <property name="bottom_attach">7</property>
+                  </packing>
+                </child>
+              </object>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="label1">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">Menu Input</property>
+              </object>
+              <packing>
+                <property name="tab_fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkTable" id="table2">
+                <property name="visible">True</property>
+                <property name="n_rows">6</property>
+                <property name="n_columns">3</property>
+                <child>
+                  <object class="GtkLabel" id="label6">
+                    <property name="visible">True</property>
+                    <property name="label" translatable="yes">Input</property>
+                    <attributes>
+                      <attribute name="weight" value="bold"/>
+                      <attribute name="scale" value="3.000000"/>
+                    </attributes>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label7">
+                    <property name="height_request">20</property>
+                    <property name="visible">True</property>
+                    <property name="label" translatable="yes">Output</property>
+                    <attributes>
+                      <attribute name="weight" value="bold"/>
+                      <attribute name="scale" value="3.000000"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="left_attach">2</property>
+                    <property name="right_attach">3</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkVSeparator" id="vseparator5">
+                    <property name="visible">True</property>
+                    <property name="orientation">vertical</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="right_attach">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkVSeparator" id="vseparator6">
+                    <property name="visible">True</property>
+                    <property name="orientation">vertical</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="right_attach">2</property>
+                    <property name="top_attach">1</property>
+                    <property name="bottom_attach">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkVSeparator" id="vseparator7">
+                    <property name="width_request">10</property>
+                    <property name="visible">True</property>
+                    <property name="orientation">vertical</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="right_attach">2</property>
+                    <property name="top_attach">3</property>
+                    <property name="bottom_attach">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="lbl_manual_output">
+                    <property name="visible">True</property>
+                    <property name="label" translatable="yes">0.0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">2</property>
+                    <property name="right_attach">3</property>
+                    <property name="top_attach">1</property>
+                    <property name="bottom_attach">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkVBox" id="vbox4">
+                    <property name="visible">True</property>
+                    <property name="orientation">vertical</property>
+                    <child>
+                      <object class="GtkFixed" id="fixed43">
+                        <property name="visible">True</property>
+                      </object>
+                      <packing>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkHBox" id="hbox7">
+                        <property name="visible">True</property>
+                        <child>
+                          <object class="GtkFixed" id="fixed22">
+                            <property name="visible">True</property>
+                          </object>
+                          <packing>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkFixed" id="fixed44">
+                            <property name="visible">True</property>
+                          </object>
+                          <packing>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkFixed" id="fixed23">
+                            <property name="visible">True</property>
+                          </object>
+                          <packing>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkFixed" id="fixed47">
+                            <property name="visible">True</property>
+                          </object>
+                          <packing>
+                            <property name="position">3</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkFixed" id="fixed24">
+                            <property name="visible">True</property>
+                          </object>
+                          <packing>
+                            <property name="position">4</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="top_attach">3</property>
+                    <property name="bottom_attach">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkVSeparator" id="vseparator8">
+                    <property name="visible">True</property>
+                    <property name="orientation">vertical</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="right_attach">2</property>
+                    <property name="top_attach">2</property>
+                    <property name="bottom_attach">3</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkHBox" id="hbox9">
+                    <property name="visible">True</property>
+                    <child>
+                      <object class="GtkLabel" id="label8">
+                        <property name="width_request">50</property>
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">Value</property>
+                      </object>
+                      <packing>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkEntry" id="txt_manual_input">
+                        <property name="width_request">200</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="tooltip_text" translatable="yes">Value to be converted</property>
+                        <property name="invisible_char">&#x25CF;</property>
+                        <property name="text" translatable="yes">1.0</property>
+                        <property name="invisible_char_set">True</property>
+                      </object>
+                      <packing>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="top_attach">1</property>
+                    <property name="bottom_attach">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkVBox" id="vbox5">
+                    <property name="visible">True</property>
+                    <property name="orientation">vertical</property>
+                    <child>
+                      <object class="GtkFixed" id="fixed45">
+                        <property name="visible">True</property>
+                      </object>
+                      <packing>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkHBox" id="hbox10">
+                        <property name="visible">True</property>
+                        <child>
+                          <object class="GtkFixed" id="fixed28">
+                            <property name="visible">True</property>
+                          </object>
+                          <packing>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkFixed" id="fixed46">
+                            <property name="visible">True</property>
+                          </object>
+                          <packing>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkFixed" id="fixed29">
+                            <property name="visible">True</property>
+                          </object>
+                          <packing>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkFixed" id="fixed48">
+                            <property name="visible">True</property>
+                          </object>
+                          <packing>
+                            <property name="position">3</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkFixed" id="fixed30">
+                            <property name="visible">True</property>
+                          </object>
+                          <packing>
+                            <property name="position">4</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="left_attach">2</property>
+                    <property name="right_attach">3</property>
+                    <property name="top_attach">3</property>
+                    <property name="bottom_attach">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkFixed" id="fixed31">
+                    <property name="height_request">40</property>
+                    <property name="visible">True</property>
+                  </object>
+                  <packing>
+                    <property name="top_attach">4</property>
+                    <property name="bottom_attach">5</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkFixed" id="fixed33">
+                    <property name="visible">True</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">2</property>
+                    <property name="right_attach">3</property>
+                    <property name="top_attach">4</property>
+                    <property name="bottom_attach">5</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkFixed" id="fixed34">
+                    <property name="height_request">500</property>
+                    <property name="visible">True</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="right_attach">2</property>
+                    <property name="top_attach">5</property>
+                    <property name="bottom_attach">6</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkFixed" id="fixed35">
+                    <property name="height_request">40</property>
+                    <property name="visible">True</property>
+                  </object>
+                  <packing>
+                    <property name="top_attach">5</property>
+                    <property name="bottom_attach">6</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkHBox" id="hbox8">
+                    <property name="visible">True</property>
+                    <child>
+                      <object class="GtkLabel" id="label9">
+                        <property name="width_request">50</property>
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">Units</property>
+                      </object>
+                      <packing>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkEntry" id="txt_manual_input_units">
+                        <property name="width_request">200</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="tooltip_text" translatable="yes">Manually-entered input unit-string</property>
+                        <property name="invisible_char">&#x25CF;</property>
+                      </object>
+                      <packing>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="top_attach">2</property>
+                    <property name="bottom_attach">3</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkHBox" id="hbox11">
+                    <property name="visible">True</property>
+                    <child>
+                      <object class="GtkLabel" id="label10">
+                        <property name="width_request">50</property>
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">Units</property>
+                      </object>
+                      <packing>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkEntry" id="txt_manual_output_units">
+                        <property name="width_request">200</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="tooltip_text" translatable="yes">Manually-entered output unit string</property>
+                        <property name="invisible_char">&#x25CF;</property>
+                      </object>
+                      <packing>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="left_attach">2</property>
+                    <property name="right_attach">3</property>
+                    <property name="top_attach">2</property>
+                    <property name="bottom_attach">3</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkHBox" id="hbox12">
+                    <property name="visible">True</property>
+                    <child>
+                      <object class="GtkFixed" id="fixed36">
+                        <property name="visible">True</property>
+                      </object>
+                      <packing>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="btn_manual_clear">
+                        <property name="label">Clear All</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="tooltip_text" translatable="yes">Reset entire GUI</property>
+                        <property name="use_action_appearance">False</property>
+                      </object>
+                      <packing>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkFixed" id="fixed37">
+                        <property name="visible">True</property>
+                      </object>
+                      <packing>
+                        <property name="position">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkFixed" id="fixed38">
+                        <property name="visible">True</property>
+                      </object>
+                      <packing>
+                        <property name="position">3</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkFixed" id="fixed39">
+                        <property name="visible">True</property>
+                      </object>
+                      <packing>
+                        <property name="position">4</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkFixed" id="fixed40">
+                        <property name="visible">True</property>
+                      </object>
+                      <packing>
+                        <property name="position">5</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="btn_manual_convert">
+                        <property name="label">Convert</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="tooltip_text" translatable="yes">Perform conversion based on input value and manually-entered input/output unit strings</property>
+                        <property name="use_action_appearance">False</property>
+                      </object>
+                      <packing>
+                        <property name="position">6</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkFixed" id="fixed41">
+                        <property name="visible">True</property>
+                      </object>
+                      <packing>
+                        <property name="position">7</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkFixed" id="fixed42">
+                        <property name="visible">True</property>
+                      </object>
+                      <packing>
+                        <property name="position">8</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="right_attach">2</property>
+                    <property name="top_attach">4</property>
+                    <property name="bottom_attach">5</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkFixed" id="fixed11">
+                    <property name="visible">True</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">2</property>
+                    <property name="right_attach">3</property>
+                    <property name="top_attach">5</property>
+                    <property name="bottom_attach">6</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="label2">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">Manual Input</property>
+              </object>
+              <packing>
+                <property name="position">1</property>
+                <property name="tab_fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child type="tab">
+              <placeholder/>
+            </child>
+          </object>
+          <packing>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkStatusbar" id="statusbar1">
+            <property name="visible">True</property>
+            <property name="spacing">2</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkAboutDialog" id="dlg_about">
+    <property name="border_width">5</property>
+    <property name="type_hint">normal</property>
+    <property name="has_separator">False</property>
+    <property name="program_name">Unit Conversion</property>
+    <property name="version">1.0</property>
+    <property name="copyright" translatable="yes">(C) 2011 Robert Grandin.  All rights reserved.</property>
+    <property name="authors">Robert Grandin</property>
+    <property name="documenters">Robert Grandin</property>
+    <child internal-child="vbox">
+      <object class="GtkVBox" id="dialog-vbox1">
+        <property name="visible">True</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child>
+          <placeholder/>
+        </child>
+        <child internal-child="action_area">
+          <object class="GtkHButtonBox" id="dialog-action_area1">
+            <property name="visible">True</property>
+            <property name="layout_style">end</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="pack_type">end</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkDialog" id="dlg_msg">
+    <property name="border_width">5</property>
+    <property name="type_hint">normal</property>
+    <property name="has_separator">False</property>
+    <child internal-child="vbox">
+      <object class="GtkVBox" id="dialog-vbox2">
+        <property name="visible">True</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child>
+          <object class="GtkLabel" id="lbl_dlg_msg_title">
+            <property name="height_request">20</property>
+            <property name="visible">True</property>
+            <property name="label" translatable="yes">Title</property>
+            <attributes>
+              <attribute name="weight" value="bold"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow" id="scrolledwindow1">
+            <property name="height_request">400</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="hscrollbar_policy">never</property>
+            <property name="vscrollbar_policy">automatic</property>
+            <child>
+              <object class="GtkViewport" id="viewport1">
+                <property name="visible">True</property>
+                <property name="resize_mode">queue</property>
+                <child>
+                  <object class="GtkLabel" id="lbl_dlg_msg_body">
+                    <property name="visible">True</property>
+                    <property name="label" translatable="yes">Message</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child internal-child="action_area">
+          <object class="GtkHButtonBox" id="dialog-action_area2">
+            <property name="visible">True</property>
+            <property name="layout_style">end</property>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <object class="GtkButton" id="btn_dlg_msg">
+                <property name="label">gtk-ok</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_action_appearance">False</property>
+                <property name="use_stock">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="pack_type">end</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <action-widgets>
+      <action-widget response="0">btn_dlg_msg</action-widget>
+    </action-widgets>
+  </object>
+</interface>
